@@ -1,31 +1,23 @@
-// Java Program to Iterate over HashMap
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
  
-// Class for iterating HashMap using for loop
 public class IterateHashMap {
+public static void main(String[] args) {
+         
+    // Creating an empty HashMap
+    HashMap<Integer, String> studentMap = new HashMap<Integer, String>();
  
-    // Main driver method
-    public static void main(String[] args)
-    {
-        // Creating a HashMap
-        Map<Integer, String> Language
-            = new HashMap<Integer, String>();
+    // Mapping string values to int keys 
+    studentMap.put(10, "Noura");
+    studentMap.put(15, "Said");
+    studentMap.put(20, "Mohammed");
+    studentMap.put(25, "AlSaidi");
  
-        // Inserting elements to the adobe HashMap
-        // Elements- Key value pairs using put() method
-        Language.put(1, "Angular");
-        Language.put(2, "Java");
-        Language.put(3, "Python");
-        Language.put(4, "Php");
- 
-        // Iterating HashMap through for loop using entrySet() 
-        for (Map.Entry<Integer, String> set :
-             Language.entrySet()) {
- 
-            // Printing all elements of a Map usning getValue()
-            System.out.println(set.getKey() + " = "
-                               + set.getValue());
+    // Iterate through the values of the HashMap and print each one
+        System.out.println("Values in the HashMap:");
+        for (String studentName : studentMap.values()) {
+            System.out.println(studentName);
         }
+
     }
+
 }
